@@ -5,7 +5,7 @@ import requests
 
 def get_data():
     city=city_name.get()
-    data=requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=3ebcbe0c6169c5ee88e8ee485913b44c").json()
+    data=requests.get("https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid={token}}").json()
     
     w_label1.config(text=data["weather"][0]["main"])
     wb_label1.config(text=data["weather"][0]["description"])
